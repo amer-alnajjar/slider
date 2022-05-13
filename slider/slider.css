@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slider-container {
+  width: 640px;
+  height: 480px;
+  margin: 10px auto;
+  position: relative;
+  margin-top: 100px;
+}
+.slider-container img {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1;
+}
+.slider-container img.active {
+  opacity: 1;
+}
+.slider-container .slid-num {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(105, 105, 105, 0.7);
+  padding: 5px 10px;
+  z-index: 2;
+  border-radius: 7px;
+  left: 10px;
+  top: 10px;
+}
+.slide-control {
+  width: 640px;
+  margin: auto;
+  overflow: hidden;
+}
+.slide-control .prev,
+.slide-control .next {
+  width: 20%;
+  color: white;
+  background-color: darkorange;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+.slide-control .prev {
+  float: left;
+}
+.slide-control .next {
+  float: right;
+}
+.slide-control .prev.disapled,
+.slide-control .next.disapled {
+  background-color: rgba(255, 140, 0, 0.5);
+  cursor: no-drop;
+}
+.slide-control .numberSlide {
+  width: 60%;
+  float: left;
+}
+.slide-control .numberSlide ul{
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+.slide-control .numberSlide ul li{
+width: 30px;
+height: 30px;
+display: inline-block;
+background-color: rgb(196, 196, 196);
+border-radius: 5px;
+margin: 0 3px;
+line-height: 30px;
+cursor: pointer;
+}
+.slide-control .numberSlide ul li.active{
+    background-color: darkorange;
+    color: white;
+}
